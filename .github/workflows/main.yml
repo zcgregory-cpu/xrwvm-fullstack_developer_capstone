@@ -26,8 +26,8 @@ jobs:
           pip install flake8
       - name: Run Linter
         run: |
-          # This command finds all Python files recursively and runs flake8 on them
-          find . -name "*.py" -exec flake8 {} +
+          # Lint all Python files in the repository (see .flake8 for excludes)
+          flake8 .
           echo "Linted all the python files successfully"
   lint_js:
     name: Lint JavaScript Files
